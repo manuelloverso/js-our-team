@@ -56,6 +56,7 @@ for (let i = 0; i < team.length; i++) {
   const singleCol = cols[i];
   const singleMember = team[i];
 
+  //Inserisco il contenuto nelle colonne
   console.log(singleMember.image);
   singleCol.innerHTML += ` <img src="./assets/img/${singleMember.image}">`;
   singleCol.innerHTML += `<h3>${singleMember.name}</h3>`;
@@ -66,5 +67,3 @@ for (let i = 0; i < team.length; i++) {
     //singleCol.innerHTML += singleMember[key];
   } */
 }
-
-//Aggiungo le stringhe di singoli oggetti in ogni colonna
