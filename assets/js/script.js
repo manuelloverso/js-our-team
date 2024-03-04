@@ -50,17 +50,17 @@ for (let i = 0; i < team.length; i++) {
   //Creo le colonne per ogni elemento dell'array
   row.insertAdjacentHTML(
     "beforeend",
-    `<div class="col-12 p-3 col-md-4"></div>`
+    `<div class="col-12 p-3 col-md-4"><div class="card pb-2"></div></div>`
   );
-  const cols = document.querySelectorAll(".col-12");
-  const singleCol = cols[i];
+  const cards = document.querySelectorAll(".card");
+  const singleCard = cards[i];
   const singleMember = team[i];
 
   //Inserisco il contenuto nelle colonne
   console.log(singleMember.image);
-  singleCol.innerHTML += ` <img src="./assets/img/${singleMember.image}">`;
-  singleCol.innerHTML += `<h3>${singleMember.name}</h3>`;
-  singleCol.innerHTML += `<span>${singleMember.role}</span>`;
+  singleCard.innerHTML += ` <img src="./assets/img/${singleMember.image}">`;
+  singleCard.innerHTML += `<h3>${singleMember.name}</h3>`;
+  singleCard.innerHTML += `<p>${singleMember.role}</p>`;
 
   /*   for (const key in singleMember) {
     //Aggiungo le stringhe di singoli oggetti in ogni colonna
