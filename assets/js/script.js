@@ -38,6 +38,29 @@ for (let i = 0; i < team.length; i++) {
   const singleMember = team[i];
 
   for (const key in singleMember) {
-    console.log(singleMember[key]);
+    //console.log(singleMember[key]);
+  }
+}
+
+//- Stampare le stesse informazioni su DOM sottoforma di stringhe
+const row = document.querySelector(".row");
+console.log(row);
+
+//Creo le colonne per ogni elemento dell'array
+for (let i = 0; i < team.length; i++) {
+  //console.log(singleMember);
+  row.insertAdjacentHTML("beforeend", `<div class="col-12 col-md-4"></div>`);
+}
+
+const cols = document.querySelectorAll(".col-12");
+console.log(cols);
+
+//Aggiungo le stringhe di singoli oggetti in ogni colonna
+for (let i = 0; i < cols.length; i++) {
+  const singleCol = cols[i];
+  const singleMember = team[i];
+
+  for (const key in singleMember) {
+    singleCol.innerHTML += singleMember[key];
   }
 }
